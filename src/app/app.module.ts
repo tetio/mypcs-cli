@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { routing } from './app.routing';
@@ -24,9 +24,10 @@ import { CompanyDetailComponent } from './company/company-detail/company-detail.
     CompanyDetailComponent
   ],
   imports: [
-    BrowserModule,lo
+    BrowserModule,
     FormsModule,
     HttpModule,
+    ReactiveFormsModule,
     routing
   ],
   providers: [AuthGuard, AuthenticationService, CompanyService],

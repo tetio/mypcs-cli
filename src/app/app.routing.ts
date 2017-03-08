@@ -5,8 +5,9 @@ import { LoginComponent } from './login/login.component'
 
 const appRoutes: Routes = [
     { path: '', component: HomeComponent, canActivate: [AuthGuard] },
-    { path: 'login', component: LoginComponent, canActivate: [AuthGuard] },
-    { path: '**', redirectTo: '' }
+    { path: 'home', component: HomeComponent, canActivate: [AuthGuard] },    
+    { path: 'login', component: LoginComponent },
+    { path: '**', redirectTo: 'home' }
 ];
 
 export const routing = RouterModule.forRoot(appRoutes);
