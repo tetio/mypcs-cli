@@ -3,7 +3,7 @@ import { AuthGuard } from './guards/auth.guard';
 import { HomeComponent } from './home/home.component'
 import { LoginComponent } from './login/login.component'
 
-const appRoutes: Routes = [
+export const appRoutes: Routes = [
     { path: '', component: HomeComponent, canActivate: [AuthGuard] },
     { path: 'home', component: HomeComponent, canActivate: [AuthGuard] },    
     { path: 'login', component: LoginComponent },

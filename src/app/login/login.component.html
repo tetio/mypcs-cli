@@ -1,17 +1,28 @@
-
-    <h2>Login</h2>
+<div class="ui-grid ui-grid-responsive ui-grid-pad">
     <form [formGroup]="loginForm" novalidate (submit)="save(loginForm.value, loginForm.valid)">
-        <div class="form-group">
-            <label for="username">Username</label>
-            <input type="text" class="form-control" formControlName="username" />
-            <div [hidden]="loginForm.controls.username.valid || (loginForm.controls.username.pristine && !submitted)" class="text-danger">Username is required</div>
-        </div>
-        <div class="form-group">
-            <label for="password">Password</label>
-            <input type="password" class="form-control" formControlName="password" />
-            <div [hidden]="loginForm.controls.password.valid || (loginForm.controls.password.pristine && !submitted)" class="text-danger">Password is required</div>
-        </div>
-        <div   class="form-group">
-            <button [disabled]="loginForm.valid==false" type="submit" class="btn btn-default">Submit</button>
-        </div>
+        <p-panel header="Login" class="ui-grid-responsive ui-g-12 ui-md-8 ui-lg-6 ui-xl-4 topMarge">
+            <div class="ui-grid-row ui-grid-col-12">
+                <div class="ui-grid-col-4">
+                    <label for="username">Username</label>
+                </div>
+                <div class="ui-grid-col-8">
+                    <input pInputText type="text" formControlName="username" />
+                    <p [hidden]="loginForm.controls.username.valid || (loginForm.controls.username.pristine && !submitted)">Username is required</p>
+                </div>
+            </div>
+            <div class="ui-grid-row ui-grid-col-12">
+                <div class="ui-grid-col-4">
+                    <label for="password">Password</label>
+                </div>
+                <div class="ui-grid-col-8">
+                    <input pInputText type="password" formControlName="password" />
+                    <div class="ui-grid-col-8" [hidden]="loginForm.controls.password.valid || (loginForm.controls.password.pristine && !submitted)">Password is required</div>
+                </div>
+            </div>
+            <div class="ui-grid-row">
+                <button  type="button" pButton [disabled]="loginForm.valid==false" label="Login" (click)="login()"></button>
+            </div>
+            <button pButton type="button" icon="fa-plus" class="{'float':'right'}" (click)="add()" label="Add"></button>
+        </p-panel>
     </form>
+</div>

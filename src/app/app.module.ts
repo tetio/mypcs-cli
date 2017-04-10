@@ -1,7 +1,13 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+
+import { 
+  ButtonModule, PasswordModule, 
+  PanelModule, } from 'primeng/primeng';
+
 
 import { routing } from './app.routing';
 
@@ -24,11 +30,14 @@ import { CompanyDetailComponent } from './company/company-detail/company-detail.
     CompanyDetailComponent
   ],
   imports: [
+    BrowserAnimationsModule,
     BrowserModule,
     FormsModule,
     HttpModule,
     ReactiveFormsModule,
-    routing
+    routing,
+    ButtonModule, PasswordModule,
+    PanelModule
   ],
   providers: [AuthGuard, AuthenticationService, CompanyService],
   bootstrap: [AppComponent]

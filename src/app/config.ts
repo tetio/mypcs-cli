@@ -6,7 +6,7 @@ export function getEnvironment(variable: string) {
     switch (env) {
         case 'localhost':
             data = {
-                endpoint: 'http://localhost:8181'+uriPrefix
+                endpoint: 'http://localhost:3000'+uriPrefix
             };
             break;
         default:
