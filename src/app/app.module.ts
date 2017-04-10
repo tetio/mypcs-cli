@@ -18,16 +18,12 @@ import { AuthenticationService } from './services/authentication.service';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
-import { CompanyListComponent } from './company/company-list/company-list.component';
-import { CompanyDetailComponent } from './company/company-detail/company-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    LoginComponent,
-    CompanyListComponent,
-    CompanyDetailComponent
+    LoginComponent
   ],
   imports: [
     BrowserAnimationsModule,
